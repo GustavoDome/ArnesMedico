@@ -5,17 +5,67 @@
 }
 
 body {
-    background:  #ffffff;
+    background: rgb(255, 255, 255);
     font-family: sans-serif;
+    padding-top: 100px;
 }
 
+/* Cabecera */
+#cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.cabeceraContenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabeceraLogo {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+}
+
+#cabecera nav {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#cabecera nav ul {
+    display: inline-flex;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#cabecera nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#cabecera nav a:hover {
+    color: #e46f48;
+}
+
+/* Carrusel */
 .tipoArnes {
     padding: 60px 20px;
 }
 
 .carrusel {
     border-radius: 10px;
-    background-color: #dbc8cc;
+    background-color: pink;
     position: relative;
     max-width: 1200px;
     margin: auto;
@@ -49,7 +99,7 @@ body {
     gap: 50px;
 }
 
-/* Imagen */
+/* Imagen de la carta*/
 .cartaImagenEtiqueta {
     flex: 1;
     aspect-ratio: 1/1;
@@ -94,7 +144,7 @@ body {
     height: 80px;
     border-radius: 50%;
     border: none;
-    background: pink;
+    background: rgb(231, 65, 65);
     color: black;
     cursor: pointer;
     font-size: 24px;
@@ -102,12 +152,12 @@ body {
 }
 
 .carruselBtn:hover {
-    background-color: #E9967A;
+    background-color: #f1aeaec5;
     transform: translateY(-50%) scale(1.1);
 }
 
 .carruselBtn:active {
-    background-color: white;
+    background-color: rgb(184, 182, 182);
     transform: translateY(-50%) scale(0.95);
 }
 .prev {
@@ -124,7 +174,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    background-color: #dbc8cc;
+    background-color: pink;
     margin: 30px;
     padding: 20px;
     overflow: hidden;
@@ -155,8 +205,14 @@ body {
 
 /* Contactos */
 .contactos {
-    background-color: #dbc8cc;
+    background-color: pink;
     margin: auto;
+}
+
+.contactos svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .contacosArnes {
@@ -170,8 +226,10 @@ body {
     text-align: center;
 }
 
-.contacosArnes p {
-    padding-top: 10px;
+.contactos p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 17px;
     margin-right: 25px;
 }
@@ -201,6 +259,47 @@ body {
 
 /* Celular */
 @media (max-width: 768px) {
+
+    body {
+        padding-top: 0;
+    }
+    
+    #cabecera {
+        position: static;
+        box-shadow: none;
+    }
+    
+    #cabecera h1 {
+        font-size: 20px;
+    }
+
+    #cabecera h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .cabeceraContenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .cabeceraLogo {
+        height: 50px;
+        margin-left: auto;
+    }
+    
+    #cabecera nav {
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    #cabecera nav ul {
+        display: inline-flex;
+        list-style: none;
+        gap: 50px;
+        padding: 0;
+    }
 
     .carta {
         flex-direction: column;
